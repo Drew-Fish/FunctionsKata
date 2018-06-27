@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions Kata</title>
+</head>
+
+<body>
+    <script>
+        //Kata 1
+        function kata1(a, b) {
+            let total = (a + b);
+            console.log(total);
+            return (total);
+        }
+        //Kata 2
+        function kata2(a, b) {
+            let total = 0;
+            for (let i = 0; i < b; i++) {
+                total = kata1(total, a);
+            }
+            console.log(total);
+            return (total);
+        }
+        //Kata 3
+        function kata3(a, b) {
+            let total = 0;
+            for (let i = 0; i < b; i++) {
+                total += kata2(a, a)
+            }
+            console.log(total);
+            return (total);
+        }
+        //Kata 4
+        function kata4(a) {
+            let total = 0;
+            for (let i = (a - 1); i > 0; i--) {
+                total += kata2(a, i);
+            }
+            console.log(total);
+            return (total);
+        }
+        function kata5(a){
+            let f0 = 0;
+            let f1 = 1;
+            let temp = 0;
+            for(let i = 2; i < a; i++){
+                temp = f1;
+                f1 = kata1(f0,f1);
+                f0 = temp;
+                console.log(f1);
+            }
+            console.log(f1);
+            return (f1);
+        }
+    </script>
+
+</body>
+
+</html>
