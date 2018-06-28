@@ -11,45 +11,45 @@
 <body>
     <script>
         //Kata 1
-        function kata1(a, b) {
+        function add(a, b) {
             let total = (a + b);
             console.log(total);
             return (total);
         }
         //Kata 2
-        function kata2(a, b) {
+        function multiply(a, b) {
             let total = 0;
             for (let i = 0; i < b; i++) {
-                total = kata1(total, a);
+                total = add(total, a);
             }
             console.log(total);
             return (total);
         }
         //Kata 3
-        function kata3(a, b) {
+        function power(a, b) {
             let total = 0;
             for (let i = 0; i < b; i++) {
-                total += kata2(a, a)
+                total += multiply(a, a)
             }
             console.log(total);
             return (total);
         }
         //Kata 4
-        function kata4(a) {
+        function factorial(a) {
             let total = 0;
             for (let i = (a - 1); i > 0; i--) {
-                total += kata2(a, i);
+                total += multiply(a, i);
             }
             console.log(total);
             return (total);
         }
-        function kata5(a){
+        function fibonacci(a){
             let f0 = 0;
             let f1 = 1;
             let temp = 0;
             for(let i = 2; i < a; i++){
                 temp = f1;
-                f1 = kata1(f0,f1);
+                f1 = add(f0,f1);
                 f0 = temp;
                 console.log(f1);
             }
