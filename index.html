@@ -13,7 +13,7 @@
         //Kata 1
         function add(a, b) {
             let total = (a + b);
-            console.log(total);
+            //console.log(total);
             return (total);
         }
         //Kata 2
@@ -22,16 +22,17 @@
             for (let i = 0; i < b; i++) {
                 total = add(total, a);
             }
-            console.log(total);
+            //console.log(total);
             return (total);
         }
         //Kata 3
         function power(a, b) {
-            let total = 0;
+            let total = 1;
             for (let i = 0; i < b; i++) {
-                total += multiply(a, a)
+                total = multiply(total,a);
+                //console.log(total);
             }
-            console.log(total);
+            //console.log(total);
             return (total);
         }
         //Kata 4
@@ -40,7 +41,7 @@
             for (let i = (a - 1); i > 0; i--) {
                 total += multiply(a, i);
             }
-            console.log(total);
+            //console.log(total);
             return (total);
         }
         function fibonacci(a){
@@ -51,11 +52,16 @@
                 temp = f1;
                 f1 = add(f0,f1);
                 f0 = temp;
-                console.log(f1);
+                //console.log(f1);
             }
-            console.log(f1);
+            //console.log(f1);
             return (f1);
         }
+        console.log(add(2,4));
+        console.log(multiply(6,8));
+        console.log(power(2,8));
+        console.log(factorial(4));
+        console.log(fibonacci(8));
     </script>
 
 </body>
